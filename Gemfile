@@ -26,6 +26,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'materialize-sass'
 #autenticazine
 gem 'devise'
+gem "paperclip", "~> 4.3"
 
 
 # Use ActiveModel has_secure_password

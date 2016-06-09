@@ -17,7 +17,11 @@
   <tbody>
     <% @contents.each do |content| %>
     <tr>
+    <td><%= image_tag content.cover.url(:thumb) %></td>
       <td><%= content.titolo %></td>
+      
+
+
       <td><%= content.decrizione %></td>
       <td><%= content.price %></td>
       <td><%= content.user.email if content.user %></td>

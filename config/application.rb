@@ -22,5 +22,6 @@ module LacerMarket
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+ # Paperclip.options[:command_path] = 'C:\Program Files (x86)\GnuWin32\bin'
   end
 end
