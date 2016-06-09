@@ -7,7 +7,7 @@ class ContentsController < ApplicationController
   def index
     @contents = Content.all
   end
-
+ 
   # GET /contents/1
   # GET /contents/1.json
   def show
