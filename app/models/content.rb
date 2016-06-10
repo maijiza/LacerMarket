@@ -1,11 +1,13 @@
 class Content < ActiveRecord::Base
+	extend FriendlyId
+	friendly_id :titolo, use: :slugged
 
-validates :titolo, :decrizione, :price, presence: true
-validates :price, numericality: { greater_then: 0 }
-validates :cover, :allegato, attachment_presence: true
+	validates :titolo, :decrizione, :price, presence: true
+	validates :price, numericality: { greater_then: 49 }
+	validates :cover, :allegato, attachment_presence: true
 
 	belongs_to :user
-
+	has_many :sails
 
 
 
