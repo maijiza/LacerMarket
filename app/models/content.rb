@@ -1,5 +1,14 @@
 class Content < ActiveRecord::Base
+
+validates :titolo, :decrizione, :price, presence: true
+validates :price, numericality: { greater_then: 0 }
+validates :cover, :allegato, attachment_presence: true
+
 	belongs_to :user
+
+
+
+
 
 	has_attached_file :cover
 	validates_attachment_content_type :cover, content_type: /\Aimage\/.*\Z/,
@@ -18,5 +27,8 @@ class Content < ActiveRecord::Base
 		'audio/mpeg',
 		'audio/mp3'],
 		message: "formato non supportato"
+
+
+
 		
 	end
